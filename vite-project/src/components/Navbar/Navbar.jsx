@@ -6,8 +6,8 @@ import Searchbar from '../searchbar/Searchbar';
 const Navbar = () => {
 
   const [searchQuery , setSearchQuery] = useState("");
+  
   const navigate = useNavigate();
-
   const onLogout = ()=>{
     navigate("/login");
   }
