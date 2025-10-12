@@ -37,8 +37,8 @@ const AddEditNotes = ({noteData,type,onClose}) => {
     return (
         <div className='relative'>
 
-            <button className='w-10 h-10 rounded-full flex items-center justify-center absolute -top-3 -right-3 hover:bg-slate-50 cursor-pointer' onClick={onClose}>
-                <MdClose className='text-xl text-slate-400' />
+            <button className='w-10 h-10 rounded-full flex items-center justify-center absolute -top-3 -right-3 hover:bg-blue-200 cursor-pointer' onClick={onClose}>
+                <MdClose className='text-2xl text-blue-800' />
             </button>
 
 
@@ -47,7 +47,7 @@ const AddEditNotes = ({noteData,type,onClose}) => {
                 <input
                     type="text"
                     className=" p-1 text-xl text-slate-950 border rounded ouline-none"
-                    placeholder='Do your Work'
+                    placeholder='Enter the Title'
                     value={title}
                     onChange={({ target }) => setTitle(target.value)}
                 />

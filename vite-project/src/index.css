@@ -24,5 +24,5 @@ body {
 }
 
 .input-lable{
-    @apply text-sm text-slate-950 font-medium;
+    @apply text-[-25px] text-slate-950 font-medium;
 }
