@@ -35,7 +35,7 @@ const Home = () => {
         </div>
       </div>
 
-    <button className='w-16 h-16 flex justify-center items-center rounded-2xl bg-primary hover:bg-blue-700 absolute right-10 bottom-10' onClick={()=>{
+    <button className='w-16 h-16 flex justify-center items-center rounded-2xl bg-primary hover:bg-blue-700 cursor-pointer absolute right-10 bottom-10' onClick={()=>{
       setOpeanAddEditModal({isShown:true, type:"add", data:null});
     }}>
       <MdAdd className='text-[32px] text-white'/>
@@ -53,7 +53,14 @@ const Home = () => {
     contentLabel=""
     className="w-[40%] max-h-[75vh] bg-white rounded-md mx-auto mt-14 p-5 overflow-scroll"
     >
-      <AddEditNotes/>
+      <AddEditNotes
+      type={openAddEditModal.type}
+        noteData={openAddEditModal.data}
+        onClose={()=>{
+          setOpeanAddEditModal({isShown:false , type:"add", data:null})
+        }}
+      />
+
     </Modal>
     </>
   )
